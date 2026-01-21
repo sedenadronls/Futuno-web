@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { useState, useCallback } from 'react';
+import FutunoLogo from './FutunoLogo';
 
 /**
  * Global Header Component - Superhuman Dark Elegance
@@ -59,13 +60,8 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <span className="flex items-center gap-3 group cursor-pointer">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/30">
-                F
-              </div>
-              <span className="text-xl font-bold text-foreground tracking-tight">
-                FUTUNO
-              </span>
+            <span className="group cursor-pointer transition-transform duration-300 hover:scale-105">
+              <FutunoLogo size={40} />
             </span>
           </Link>
 

@@ -3,6 +3,7 @@ import { Input } from '@/components/ui/input';
 import { Link } from 'wouter';
 import { Mail, Linkedin, Twitter, Github } from 'lucide-react';
 import { useState } from 'react';
+import FutunoLogo from './FutunoLogo';
 
 /**
  * Global Footer Component - Superhuman Dark Elegance
@@ -28,14 +29,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Column 1: About FUTUNO */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
-                F
-              </div>
-              <span className="text-xl font-bold text-foreground tracking-tight">
-                FUTUNO
-              </span>
-            </div>
+            <FutunoLogo size={40} />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Elite AI Automation Agency. We build autonomous agent workflows, custom LLM integrations, and neural strategy solutions for enterprises worldwide.
             </p>
