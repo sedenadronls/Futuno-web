@@ -1,162 +1,121 @@
-# FUTUNO Design Brainstorming
+# FUTUNO Design Brainstorming - AI Automation Agency
 
-## Response 1: Cyberpunk Minimalism (Probability: 0.08)
+## Response 1: Superhuman Dark Elegance (Probability: 0.09)
 
-**Design Movement:** Neo-Tokyo Minimalism meets Cyberpunk Aesthetic
+**Design Movement:** Superhuman/Linear.app inspired ultra-premium dark-mode
 
 **Core Principles:**
-- Sharp geometric precision with neon accents
-- Extreme whitespace dominance with strategic color pops
-- Monochromatic typography hierarchy with electric accent colors
-- Asymmetric layouts that feel intentional and bold
+- Deep obsidian backgrounds with strategic lighting
+- Electric blue accents that command attention
+- Extreme precision in spacing and typography
+- Layered depth through glassmorphism and subtle gradients
 
 **Color Philosophy:**
-- Primary: Deep charcoal (#0a0e27) with pure white (#ffffff)
-- Accent: Electric cyan (#00d9ff) and hot magenta (#ff006e)
-- Reasoning: Creates high-contrast, futuristic energy that commands attention while maintaining sophistication
+- Primary Background: Deep Obsidian (#050505) - creates infinite depth
+- Accent: Futuno Blue (#007AFF) - electric, trustworthy, tech-forward
+- Text: Silver-white (#F5F5F7) for primary, (#A1A1A6) for secondary
+- Glow Effects: Blue (#007AFF) with 20-40% opacity for borders and highlights
+- Reasoning: Dark mode reduces eye strain while blue accents convey innovation and reliability
 
 **Layout Paradigm:**
-- Diagonal cuts and angled sections using CSS clip-path
-- Content flows in a Z-pattern with strategic negative space
-- Hero section spans full viewport with text positioned off-center
-- Feature blocks arranged in a staggered, non-uniform grid
+- Asymmetric hero with floating 3D elements
+- Bento grid layouts for services and features
+- Full-width sections with contained content
+- Strategic negative space to let content breathe
 
 **Signature Elements:**
-- Glowing neon borders on interactive elements
-- Animated gradient lines connecting sections
-- Minimalist icons with geometric precision
-- Subtle scanline effects on hover states
+- Glowing blue borders on interactive cards
+- Frosted glass (glassmorphism) panels with backdrop blur
+- Animated gradient lines showing data flow
+- 3D card transforms on hover with perspective
 
 **Interaction Philosophy:**
-- Instant, snappy transitions (150ms)
-- Neon glow effects on hover with subtle pulse animations
-- Click feedback with brief color shift and scale
-- Smooth scroll reveals with staggered element animations
+- Smooth, buttery transitions (300-400ms ease-out)
+- Hover states with glow intensification and subtle lift
+- Click feedback with scale and color shift
+- Scroll-triggered animations for section reveals
 
 **Animation:**
-- Entrance: Elements slide in from edges with fade (300ms ease-out)
-- Hover: Neon glow intensifies, subtle scale (1.02x)
-- Scroll: Parallax depth with varying speeds
-- Micro: Icon rotations, subtle bounces on interaction
+- Entrance: Elements fade in with subtle upward motion (400ms)
+- Hover: Cards lift with enhanced glow and shadow
+- Scroll: Parallax depth on hero elements
+- Data Flow: Animated dashed lines with traveling dots
+- Micro: Subtle pulse on CTAs, smooth number counting
 
 **Typography System:**
-- Display: "Space Mono" Bold for headlines (all caps, tight letter-spacing)
-- Body: "Roboto" Regular for content (clean, geometric)
-- Accent: "Space Mono" for CTAs and labels
-- Hierarchy: 48px/36px/24px/16px with consistent line-height
+- Display: "Inter" or "Geist Sans" Bold for headlines (tight tracking)
+- Body: "Inter" Regular for content (clean, geometric)
+- Accent: "Inter" SemiBold for CTAs and labels
+- Hierarchy: 72px/48px/32px/24px/16px with generous line-height
 
 ---
 
-## Response 2: Organic Glassmorphism (Probability: 0.07)
+## Response 2: Cyberpunk Neon (Probability: 0.05)
 
-**Design Movement:** Soft Futurism with Glassmorphism and Organic Curves
+**Design Movement:** Blade Runner meets Silicon Valley
 
 **Core Principles:**
-- Frosted glass surfaces with subtle blur and transparency
-- Organic, flowing curves instead of sharp angles
-- Layered depth with multiple transparency levels
-- Warm, inviting color palette with cool accents
+- High contrast with neon accents
+- Grid-based layouts with intentional breaks
+- Scanline and noise textures for depth
+- Aggressive typography with sharp angles
 
 **Color Philosophy:**
-- Primary: Soft gradient from cream (#f8f6f1) to light lavender (#e8e4f3)
-- Accent: Warm gold (#d4a574) and cool teal (#4a90a4)
-- Reasoning: Creates premium, approachable feel with depth and sophistication
-
-**Layout Paradigm:**
-- Overlapping card layers with offset positioning
-- Curved sections with organic wave dividers
-- Content flows in a circular, spiral-like pattern
-- Hero uses asymmetric positioning with floating elements
-
-**Signature Elements:**
-- Frosted glass cards with backdrop blur
-- Soft drop shadows with multiple layers
-- Organic SVG blob shapes as backgrounds
-- Subtle gradient overlays on images
-
-**Interaction Philosophy:**
-- Smooth, fluid transitions (250ms ease-in-out)
-- Cards lift on hover with enhanced blur
-- Gentle scale and shadow changes
-- Smooth scroll with parallax depth
-
-**Animation:**
-- Entrance: Elements fade and scale up smoothly (400ms)
-- Hover: Subtle lift with shadow enhancement
-- Scroll: Gentle parallax with blur intensity changes
-- Micro: Smooth color transitions, gentle floating animations
-
-**Typography System:**
-- Display: "Poppins" SemiBold for headlines (warm, friendly)
-- Body: "Inter" Regular for content (clean, readable)
-- Accent: "Poppins" Bold for CTAs
-- Hierarchy: 52px/40px/28px/16px with generous line-height
+- Background: Pure black (#000000) with subtle noise
+- Accent: Hot pink (#FF006E) and cyan (#00D9FF)
+- Text: Pure white (#FFFFFF) and gray (#888888)
+- Reasoning: Creates futuristic, edgy feel for cutting-edge AI
 
 ---
 
-## Response 3: Brutalist Tech (Probability: 0.06)
+## Response 3: Minimal Tech (Probability: 0.04)
 
-**Design Movement:** Brutalist Architecture meets Modern Tech
+**Design Movement:** Apple-inspired minimalism with tech edge
 
 **Core Principles:**
-- Raw, unpolished aesthetic with intentional imperfection
-- Bold typography and stark contrasts
-- Minimal decoration, maximum functionality
-- Concrete-inspired textures and earthy tones
+- Extreme whitespace with strategic color pops
+- Subtle gradients and soft shadows
+- Focus on content and functionality
+- Clean, uncluttered interfaces
 
 **Color Philosophy:**
-- Primary: Concrete gray (#3a3a3a) and off-white (#f5f5f5)
-- Accent: Deep rust (#8b4513) and steel blue (#36454f)
-- Reasoning: Creates authentic, grounded feel with industrial sophistication
-
-**Layout Paradigm:**
-- Grid-based structure with intentional misalignment
-- Raw borders and stark divisions between sections
-- Typography-driven layout with minimal imagery
-- Hero uses bold text with minimal decoration
-
-**Signature Elements:**
-- Thick borders and stark dividing lines
-- Monospace typography for technical elements
-- Raw, unrefined textures and grain
-- Minimal icons with geometric precision
-
-**Interaction Philosophy:**
-- Direct, immediate feedback without flourish
-- Simple color inversion on hover
-- Minimal animation, focus on functionality
-- Clear, obvious interactive states
-
-**Animation:**
-- Entrance: Quick fade-in (200ms) with no easing
-- Hover: Instant color change with no transition
-- Scroll: Minimal parallax, focus on content
-- Micro: Simple opacity changes, no complex animations
-
-**Typography System:**
-- Display: "IBM Plex Mono" Bold for headlines (raw, technical)
-- Body: "IBM Plex Sans" Regular for content (clear, functional)
-- Accent: "IBM Plex Mono" for labels and CTAs
-- Hierarchy: 56px/44px/32px/16px with tight line-height
+- Background: Near-black (#0A0A0A) with subtle gradients
+- Accent: Soft blue (#5AC8FA) and green (#30D158)
+- Text: White (#FFFFFF) and light gray (#C7C7CC)
+- Reasoning: Professional, trustworthy, enterprise-ready
 
 ---
 
-## Selected Design: Organic Glassmorphism
+## Selected Design: Superhuman Dark Elegance
 
-After careful consideration, **Organic Glassmorphism** has been selected as the design philosophy for FUTUNO. This approach strikes the perfect balance between premium sophistication and approachable warmth, which aligns with FUTUNO's positioning as an "Advanced AI Solutions" provider that values both innovation and user experience.
-
-### Why This Choice:
-
-1. **Premium Positioning:** Glassmorphism conveys cutting-edge technology and sophistication
-2. **Warmth & Accessibility:** Organic curves and warm accents make the advanced tech feel approachable
-3. **Visual Depth:** Layered transparency creates visual interest without clutter
-4. **Modern Aesthetic:** Aligns with current design trends while maintaining timelessness
-5. **Versatility:** Works beautifully across all page types (home, blog, contact)
+After careful consideration, **Superhuman Dark Elegance** has been selected as the design philosophy for FUTUNO. This approach perfectly aligns with the premium AI Automation Agency positioning, combining the sophistication of Linear.app with the polish of Superhuman.
 
 ### Design System Implementation:
 
-- **Color Palette:** Cream-to-lavender gradients with gold and teal accents
-- **Typography:** Poppins for warmth, Inter for clarity
-- **Components:** Frosted glass cards, soft shadows, organic curves
-- **Animations:** Smooth, fluid transitions that feel premium
-- **Spacing:** Generous whitespace with intentional layering
+**Colors:**
+- Background: #050505 (Deep Obsidian)
+- Surface: #0A0A0A (Elevated surfaces)
+- Card: #111111 (Card backgrounds)
+- Border: #1A1A1A (Subtle borders)
+- Accent: #007AFF (Futuno Blue)
+- Accent Glow: rgba(0, 122, 255, 0.3)
+- Text Primary: #F5F5F7 (Silver-white)
+- Text Secondary: #A1A1A6 (Muted gray)
+- Text Tertiary: #6E6E73 (Subtle gray)
+
+**Typography:**
+- Font Family: Inter (with Geist Sans fallback)
+- Display: Bold, -0.02em tracking
+- Body: Regular, 1.6 line-height
+
+**Effects:**
+- Glassmorphism: backdrop-blur-xl, bg-white/5, border-white/10
+- Glow: box-shadow with blue at 20-40% opacity
+- 3D Cards: perspective-1000, rotateX/Y on hover
+- Animations: Framer Motion for smooth transitions
+
+**Components:**
+- Cards with glowing borders on hover
+- Frosted glass modals and drawers
+- Animated workflow visualizations
+- Interactive ROI calculator with live updates

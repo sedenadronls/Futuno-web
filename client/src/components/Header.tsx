@@ -1,63 +1,76 @@
 import { Button } from '@/components/ui/button';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 /**
- * Global Header Component
- * Sticky navigation with FUTUNO branding, centered nav links, and Contact CTA
- * Design: Organic Glassmorphism with frosted glass effect
+ * Global Header Component - Superhuman Dark Elegance
+ * Sticky navigation with FUTUNO branding, nav links, Login and Get Started CTAs
  */
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Blog', href: '/blog' },
     { label: 'Services', href: '/#services' },
-    { label: 'About', href: '/#about' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' },
   ];
 
+  const isActive = (href: string) => {
+    if (href === '/') return location === '/';
+    return location.startsWith(href.replace('/#', '/'));
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50">
       {/* Glassmorphism background */}
-      <div className="absolute inset-0 glass pointer-events-none" />
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-xl" />
       
-      <nav className="relative container mx-auto px-4 py-4 md:py-6">
+      <nav className="relative container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <a className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center text-white font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+            <span className="flex items-center gap-3 group cursor-pointer">
+              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/30">
                 F
               </div>
-              <span className="text-xl md:text-2xl font-bold text-foreground hidden sm:inline">
+              <span className="text-xl font-bold text-foreground tracking-tight">
                 FUTUNO
               </span>
-            </a>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
-                <a className="text-foreground/70 hover:text-foreground transition-colors duration-200 font-medium">
+                <span
+                  className={`text-sm font-medium transition-colors duration-200 cursor-pointer ${
+                    isActive(link.href)
+                      ? 'text-primary'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
                   {link.label}
-                </a>
+                </span>
               </Link>
             ))}
           </div>
 
-          {/* Desktop Contact CTA */}
-          <div className="hidden md:block">
-            <Link href="/contact">
-              <a>
-                <Button 
-                  className="bg-gradient-accent hover:shadow-lg text-white font-semibold px-6 py-2 rounded-full transition-all duration-300"
-                >
-                  Contact Us
-                </Button>
-              </a>
+          {/* Desktop Auth Buttons */}
+          <div className="hidden md:flex items-center gap-4">
+            <Link href="/login">
+              <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
+                Login
+              </Button>
+            </Link>
+            <Link href="/register">
+              <Button className="btn-primary">
+                Get Started
+              </Button>
             </Link>
           </div>
 
@@ -68,9 +81,9 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6 text-foreground" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6 text-foreground" />
             )}
           </button>
         </div>
@@ -78,26 +91,40 @@ export default function Header() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border/50 pt-4 animate-fade-in-up">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
-                  <a 
-                    className="block px-4 py-2 text-foreground/70 hover:text-foreground hover:bg-secondary rounded-lg transition-colors"
+                  <span
+                    className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+                      isActive(link.href)
+                        ? 'text-primary bg-primary/10'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                    }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
-              <Link href="/contact">
-                <a onClick={() => setMobileMenuOpen(false)}>
-                  <Button 
-                    className="w-full bg-gradient-accent hover:shadow-lg text-white font-semibold rounded-full transition-all duration-300"
+              <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-border/50">
+                <Link href="/login">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-center"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
-                    Contact Us
+                    Login
                   </Button>
-                </a>
-              </Link>
+                </Link>
+                <Link href="/register">
+                  <Button
+                    className="w-full btn-primary"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Get Started
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         )}
