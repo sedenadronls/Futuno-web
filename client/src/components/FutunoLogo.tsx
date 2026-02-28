@@ -22,19 +22,37 @@ export default function FutunoLogo({
 }: FutunoLogoProps) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      {/* Logo Symbol - Uses the generated PNG with transparent background */}
+      {/* Logo Symbol - SVG-based for reliable rendering on all deployments */}
       <div 
         className="relative flex-shrink-0"
         style={{ width: size, height: size }}
       >
-        <img 
-          src="/images/futuno-logo.png" 
-          alt="FUTUNO Logo"
-          className="w-full h-full object-contain"
-          style={{
-            filter: 'drop-shadow(0 0 8px rgba(0, 122, 255, 0.4))',
-          }}
-        />
+        <svg
+          width={size}
+          height={size}
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ filter: 'drop-shadow(0 0 8px rgba(0, 122, 255, 0.4))' }}
+        >
+          <defs>
+            <linearGradient id="futunoGradientMain" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#00A3FF" />
+              <stop offset="50%" stopColor="#007AFF" />
+              <stop offset="100%" stopColor="#0055CC" />
+            </linearGradient>
+            <filter id="glowMain" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <circle cx="50" cy="50" r="42" stroke="url(#futunoGradientMain)" strokeWidth="5" fill="none" filter="url(#glowMain)" />
+          <path d="M30 50 L55 30 L55 42 L75 42 L75 58 L55 58 L55 70 Z" fill="url(#futunoGradientMain)" filter="url(#glowMain)" />
+          <circle cx="50" cy="50" r="4" fill="url(#futunoGradientMain)" />
+        </svg>
       </div>
       
       {/* Logo Text */}

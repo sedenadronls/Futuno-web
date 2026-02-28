@@ -152,8 +152,12 @@ function vitePluginManusDebugCollector(): Plugin {
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
 
+// Use /Futuno-web/ base path when building for GitHub Pages
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+
 export default defineConfig({
   plugins,
+  base: isGitHubPages ? '/Futuno-web/' : '/',
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

@@ -8,6 +8,7 @@ import FutunoLogo from './FutunoLogo';
  * Global Header Component - Superhuman Dark Elegance
  * Sticky navigation with FUTUNO branding, nav links, Login and Get Started CTAs
  * Supports smooth scrolling to sections on the home page
+ * Uses hash-based routing for GitHub Pages compatibility
  */
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

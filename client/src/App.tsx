@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -13,7 +14,7 @@ import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import Dashboard from "./pages/Dashboard";
 
-function Router() {
+function RouterContent() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
@@ -34,16 +35,17 @@ function Router() {
 /**
  * FUTUNO - AI Automation Agency
  * Theme: Superhuman Dark Elegance
+ * Uses hash-based routing for GitHub Pages compatibility
  */
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="dark"
-      >
+      <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <Router hook={useHashLocation}>
+            <RouterContent />
+          </Router>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

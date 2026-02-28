@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 import { Mail, Linkedin, Twitter, Github } from 'lucide-react';
 import { useState } from 'react';
 import FutunoLogo from './FutunoLogo';
@@ -8,10 +8,12 @@ import FutunoLogo from './FutunoLogo';
 /**
  * Global Footer Component - Superhuman Dark Elegance
  * 4-column layout with dark theme styling
+ * Uses hash-based routing for GitHub Pages compatibility
  */
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [, setLocation] = useLocation();
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,6 +21,19 @@ export default function Footer() {
       setSubscribed(true);
       setEmail('');
       setTimeout(() => setSubscribed(false), 3000);
+    }
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      setLocation('/');
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
     }
   };
 
@@ -46,32 +61,36 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Services</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/#services">
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Custom LLM Integration
-                  </span>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="text-muted-foreground hover:text-primary transition-colors cursor-pointer text-left"
+                >
+                  Custom LLM Integration
+                </button>
               </li>
               <li>
-                <Link href="/#services">
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Autonomous Agent Workflows
-                  </span>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="text-muted-foreground hover:text-primary transition-colors cursor-pointer text-left"
+                >
+                  Autonomous Agent Workflows
+                </button>
               </li>
               <li>
-                <Link href="/#services">
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Neural Strategy Consulting
-                  </span>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="text-muted-foreground hover:text-primary transition-colors cursor-pointer text-left"
+                >
+                  Neural Strategy Consulting
+                </button>
               </li>
               <li>
-                <Link href="/#pricing">
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Pricing Plans
-                  </span>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('pricing')}
+                  className="text-muted-foreground hover:text-primary transition-colors cursor-pointer text-left"
+                >
+                  Pricing Plans
+                </button>
               </li>
             </ul>
           </div>
